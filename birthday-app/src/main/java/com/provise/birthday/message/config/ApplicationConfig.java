@@ -19,7 +19,7 @@ public class ApplicationConfig {
 	 
 	        mailSender.setHost("smtp.outlook.com");
 	        mailSender.setPort(587);
-	        mailSender.setUsername("koteswar.rao@proviseconsulting.com");
+	        mailSender.setUsername("swapnil.patil@proviseconsulting.com");
 	        mailSender.setPassword("a@9502553523");
 	 
 	        Properties javaMailProperties = new Properties();

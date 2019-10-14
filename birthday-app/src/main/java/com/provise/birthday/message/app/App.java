@@ -6,7 +6,7 @@ import com.provise.birthday.message.jobScheduler.BirthdayMailJobScheduler;
 
 public class App {
 	
-	public static void main(String[] args) {
+	public static void mailScheduler() {
 		
 		try {
 			
