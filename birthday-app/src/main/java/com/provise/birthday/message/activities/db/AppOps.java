@@ -24,7 +24,8 @@ public class AppOps {
 		ObjectMapper objectMapper = new ObjectMapper();
 		List<EmployeeModel> employeModels = new ArrayList<EmployeeModel>();
 		try {
-			String queryStr = "select * from `Birthdays` where DOB = '" + StringUtil.getDateFormatYearMonthDay(DOB, "yyyy-MM-dd")+ "'";
+			String queryStr = "select * from `Employee` where DOB = '" + StringUtil.getDateFormatYearMonthDay(DOB, "yyyy-MM-dd")+ "'";
+			//String queryStr = "select * from `Employee` where DOB = '2019-10-21 00:00:00'";
 			System.out.println("executing query ::" + queryStr);
 			rs = db.query(queryStr);
 			if (rs != null) {
@@ -32,8 +33,9 @@ public class AppOps {
 					String jsonStr = rs.next().toJSON();
 					Map<String, Object> mapData = objectMapper.readValue(jsonStr, Map.class);
 					System.out.println("map::" + mapData);
+					System.out.println("DateOfBirth::"+mapData.get("DOB").toString());
 					EmployeeModel model = new EmployeeModel(mapData.get("firstName").toString(), mapData.get("lastName").toString(),
-							StringUtil.convertStringTodate(mapData.get("DOB").toString(),"yyyy-mm-dd HH:mm:ss"),mapData.get("email").toString());
+					StringUtil.convertStringTodate(mapData.get("DOB").toString(),"yyyy-mm-dd HH:mm:ss"),mapData.get("emailAddress").toString());
 					employeModels.add(model);
 					//return employeModels;
 				} // while ends

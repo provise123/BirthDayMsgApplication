@@ -18,7 +18,7 @@ public class EmpDBUtil {
 	
 	public static ODatabaseSession getClientConnection() {
 		OrientDB orientDB = new OrientDB("remote:localhost", OrientDBConfig.defaultConfig());
-		ODatabaseSession databaseSession = orientDB.open("birthDayDetails", "root", "root");
+		ODatabaseSession databaseSession = orientDB.open("doc_DB", "root", "root");
 		return databaseSession;
 	}
 	

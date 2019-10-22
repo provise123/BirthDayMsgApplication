@@ -20,6 +20,7 @@ public class AppDaoImpl implements AppDao{
 		System.out.println("Entered AppDaoImpl");
 		List<EmployeeModel> attrList = new ArrayList<EmployeeModel>();
 		Date dob =model.getDOB();
+		
 		ODatabaseSession db = EmpDBUtil.getClientConnection();
 		attrList = AppOps.getAllEmployeeData(db,dob);
 		return attrList; 

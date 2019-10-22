@@ -18,7 +18,7 @@ public class BirthdayMailJobScheduler {
 		logger.info("Entered mailScheduler method");
 		JobDetail birthdayMailJob = JobBuilder.newJob(BirthdayMailJob.class).withIdentity("birthdayJob").build();
 		Trigger tgr1 = TriggerBuilder.newTrigger().withIdentity("cronTrigger1")
-				.withSchedule(CronScheduleBuilder.dailyAtHourAndMinute(17,59)).build();
+				.withSchedule(CronScheduleBuilder.dailyAtHourAndMinute(14,41)).build();
 		// CronScheduleBuilder.cronSchedule("*/5 * * * * ?")
 		Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
 		scheduler.start();

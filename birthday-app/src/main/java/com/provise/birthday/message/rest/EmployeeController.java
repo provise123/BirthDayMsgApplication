@@ -1,11 +1,9 @@
 package com.provise.birthday.message.rest;
 
-import java.util.Date;
 import java.util.List;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 
 import org.quartz.SchedulerException;
 import org.slf4j.Logger;
@@ -54,7 +52,9 @@ public class EmployeeController {
 	public static void main(String[] args) {
 		
 		EmployeeController controller = new EmployeeController();
-		controller.bdayScheduler();
+		//controller.bdayScheduler();
+		EmployeeModel model = new EmployeeModel();
+		controller.getEmpList(model);
 		
 	}
 	

@@ -23,4 +23,12 @@ public class StringUtil {
 		
 		return null;
 	}
+	
+	public static void main(String[] args) {
+		
+		System.out.println(StringUtil.convertStringTodate("2019-10-21 00:00:00","yyyy-mm-dd HH:mm:ss"));
+		
+		
+		
+	}
 }
