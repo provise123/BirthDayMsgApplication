@@ -24,8 +24,8 @@ public class AppOps {
 		ObjectMapper objectMapper = new ObjectMapper();
 		List<EmployeeModel> employeModels = new ArrayList<EmployeeModel>();
 		try {
-			String queryStr = "select * from `Employee` where DOB = '" + StringUtil.getDateFormatYearMonthDay(DOB, "yyyy-MM-dd")+ "'";
-			//String queryStr = "select * from `Employee` where DOB = '2019-10-21 00:00:00'";
+			//String queryStr = "select * from `Employee` where DOB = '" + StringUtil.getDateFormatYearMonthDay(DOB, "yyyy-MM-dd")+ "'";
+			String queryStr = "select * from `Employee` where DOB = '2019-10-10 00:00:00'";
 			System.out.println("executing query ::" + queryStr);
 			rs = db.query(queryStr);
 			if (rs != null) {
